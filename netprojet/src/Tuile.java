@@ -45,10 +45,6 @@ public class Tuile {
         public EtatTuile getEtat(){
             return this.etatTuile;
         }
-        
-        public void Test(){
-            //Je suis le test
-        }
 
 
 
