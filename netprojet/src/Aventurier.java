@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 public abstract class Aventurier {
 
 	private Tuile casePosition;
@@ -6,25 +9,13 @@ public abstract class Aventurier {
 	 * Nathan Bolosse Lel
 	 * @param grille
 	 */
-	public Collection<Tuile> getCasesPossibles(Grille grille) {
-		// TODO - implement Aventurier.getCasesPossibles
-		throw new UnsupportedOperationException();
+	public ArrayList<Tuile> getCasesPossibles(Grille grille) {
+		// retourne les cases adjacentes à la position de l'aventurier, sans la position de l'aventurier elle meme
+                ArrayList<Tuile> casesPossibles = new ArrayList<>;
+                
 	}
-
-	/**
-	 * 
-	 * @param tuile
-	 */
-	public void setPosition(Tuile tuile) {
-		// TODO - implement Aventurier.setPosition
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param grille
-	 */
-	public Collection<Tuile> getCasesPossibleAssechement(Grille grille) {
+        
+	public ArrayList<Tuile> getCasesPossibleAssechement(Grille grille) {
 		// TODO - implement Aventurier.getCasesPossibleAssechement
 		throw new UnsupportedOperationException();
 	}
@@ -34,4 +25,13 @@ public abstract class Aventurier {
 		throw new UnsupportedOperationException();
 	}
 
+        public Tuile getCasePosition() {
+            return casePosition;
+        }
+
+        public void setCasePosition(Tuile casePosition) {
+            this.casePosition = casePosition;
+        }
+
+        
 }
