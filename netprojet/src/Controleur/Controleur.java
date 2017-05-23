@@ -21,7 +21,7 @@ public class Controleur {
 		this.grille = new Grille();
 	}
 
-	/* Effectuer action traite les messages Vue => Contrôleur et appelle
+	/* effectuerAction traite les messages Vue => Contrôleur et appelle
 	les méthodes correspondantes
 	*/
 	public void effectuerAction(Message msg) {
@@ -30,18 +30,21 @@ public class Controleur {
 
 	/* Actions de jeu */
 	public void tourDeJeu() {
-
+            // => le diag. séquence est incorrect. Que fait tourDeJeu en réalité ?
 	}
 
+        /* Récupère et envoie à l'IHM les options de déplacement possibles pour le joueur du tour */
 	public void deplacement() {
 
 	}
 
+        /* Récupère et envoie à l'IHM les options d'assèchement possibles pour le joueur du tour */
 	public void assecher() {
 
 	}
 
-	/* Autres méthodes */
+	/* Autres méthodes 
+	===========================================*/
 
 	/* Renvoie TRUE si le tour courant est fini
 	=> replace le compteur d'actions à 3 si c'est le cas
@@ -55,7 +58,9 @@ public class Controleur {
 		return false;
 	}
 
-	/* Getters\Setters */
+	/* Getters\Setters 
+	===========================================*/
+        
 	public Grille getGrille() {
 		return this.grille;
 	}

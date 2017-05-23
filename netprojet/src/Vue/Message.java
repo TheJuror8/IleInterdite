@@ -10,12 +10,12 @@ public class Message {
 
     /* Enuméré pour qualifier le type de message envoyé entre la vue et le contrôleur */
     public static enum TypeMessage {
-        LISTE_CASES, // on envoie la liste des cases possibles de déplacement à l'IHM
-        LISTE_ASSECHER, // on envoie la liste des cases que le joueur peut assécher à l'IHM
-        DEPLACER,  // le joueur clique sur le bouton Aller
-        ASSECHER,  // le joueur clique sur le bouton Assécher
-        FINTOUR,   // le joueur clique sur le bouton de fin de tour
-        ACTION_SPECIALE // message pour les actions spéciales
+        OPT_CASES, // on envoie la liste des options de déplacement à l'IHM
+        OPT_ASSECHER, // on envoie la liste des cases que le joueur peut assécher à l'IHM
+        DEPLACER,  // le joueur a choisi une case vers laquelle se déplacer et a validé => msg contient la case destination
+        ASSECHER,  // le joueur a choisi une case à assécher et a validé => msg contient la case à assécher
+        FINTOUR,   // le joueur a cliqué sur le bouton de fin de tour
+        ACTION_SPECIALE // message pour les actions spéciales => A FAIRE
     }
 
     private TypeMessage type;

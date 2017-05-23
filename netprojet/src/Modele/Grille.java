@@ -11,6 +11,9 @@ public class Grille {
 		initialiser_grille();
 	}
 
+	/* Getters
+	===========================================*/
+
 	/* Renvoie les cases adjacentes à la tuile passée en paramètre
 	 => indifféremment de l'état des tuiles*/
 	public ArrayList<Tuile> getCasesAdjacentes(Tuile tuile_pos) {
@@ -36,6 +39,19 @@ public class Grille {
 
 		return listeTuiles;
 	}
+
+	private Tuile[][] getmap() {
+		return this.map_tuiles;
+	}
+
+	/* Renvoie la tuile correspondant aux coordonnées passées en paramètres
+	=> null si on sort de la taille de map_tuiles*/
+	private Tuile getTuile (int x, int y) {
+		return ((x<=5 && x>=0)&&(y<=5 && y>=0)) ? getmap()[y][x] : null;
+	}
+
+	/* Autres méthodes utiles
+	===========================================*/
 
 	/* Renvoie les cases correspondant au filtre donné par rapport à la position pos */
 	private ArrayList<Tuile> calculCases(int[][] filtre, int[] pos) {
@@ -74,16 +90,4 @@ public class Grille {
 			}
 		}
 	}
-
-	/* Getters\Setters */
-	private Tuile[][] getmap() {
-		return this.map_tuiles;
-	}
-
-	/* Renvoie la tuile correspondant aux coordonnées passées en paramètres
-	=> null si on sort de la taille de map_tuiles*/
-	private Tuile getTuile (int x, int y) {
-		return ((x<=5 && x>=0)&&(y<=5 && y>=0)) ? getmap()[y][x] : null;
-	}
-
 }

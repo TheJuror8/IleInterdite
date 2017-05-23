@@ -8,25 +8,39 @@ public abstract class Aventurier {
 
 	private Tuile casePosition;
 
-	//public ArrayList<Tuile> getCasesPossibles(Grille grille) {
-	// retourne les cases adjacentes à la position de l'aventurier, sans la position de l'aventurier elle meme
-	//ArrayList<Tuile> casesPossibles = new ArrayList<>;
+	Aventurier(Tuile caseDepart) {
+		this.casePosition = caseDepart;
+	}
 
-	//}
+	/* Getters
+	===========================================*/
 
+	/* Renvoie la liste des cases non sombrées adjacentes	à la case position de l'aventurier */
+	public ArrayList<Tuile> getCasesPossibles(Grille grille) {
+		ArrayList<Tuile> casesPossibles = new ArrayList<>();
+
+		return casesPossibles;
+	}
+
+	/* Renvoie la liste des cases non sombrées adjacentes	à la case position de l'aventurier,
+	 plus la case active de l'aventurier */
 	public ArrayList<Tuile> getCasesPossibleAssechement(Grille grille) {
-		// TODO - implement Aventurier.getCasesPossibleAssechement
-		throw new UnsupportedOperationException();
+		ArrayList<Tuile> casesPossibles = new ArrayList<>();
+
+		return casesPossibles;
 	}
 
 	public Tuile getPosition() {
-		// TODO - implement Aventurier.getPosition
-		throw new UnsupportedOperationException();
+		return this.casePosition;
 	}
 
 	public Tuile getCasePosition() {
 		return casePosition;
 	}
+
+
+	/* Setters
+	===========================================*/
 
 	public void setPosition(Tuile casePosition) {
 		this.casePosition = casePosition;
