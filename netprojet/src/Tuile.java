@@ -1,4 +1,3 @@
-package ileinterdite;
 
 import java.util.ArrayList;
 
@@ -26,8 +25,6 @@ public class Tuile {
             return posY;
         }
 
-
-
 	public int[] getPosition() {
 		int[] pos = new int[2];
                 
@@ -36,12 +33,18 @@ public class Tuile {
                 
                 return pos;
 	}
-
-
         
 	public void addJoueurCase(Aventurier j) {
 		joueursSurCase.add(j);
 	}
+        
+        public void setEtat(EtatTuile e){
+            this.etatTuile = e;
+        }
+        
+        public EtatTuile getEtat(){
+            return this.etatTuile;
+        }
 
 
 
