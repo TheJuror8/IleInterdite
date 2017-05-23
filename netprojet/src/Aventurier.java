@@ -3,7 +3,7 @@ public abstract class Aventurier {
 	private Tuile casePosition;
 
 	/**
-	 * 
+	 * Nathan Bolosse Lel
 	 * @param grille
 	 */
 	public Collection<Tuile> getCasesPossibles(Grille grille) {
