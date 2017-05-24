@@ -1,5 +1,6 @@
 package Modele.Aventuriers;
 
+import Modele.EtatTuile;
 import Modele.Tuile;
 import Modele.Grille;
 import java.util.ArrayList;
@@ -15,10 +16,14 @@ public abstract class Aventurier {
 	/* Getters
 	===========================================*/
 
-	/* Renvoie la liste des cases non sombrées adjacentes	à la case position de l'aventurier */
+	/* Renvoie la liste des cases non sombrées adjacentes à la case position de l'aventurier */
 	public ArrayList<Tuile> getCasesPossibles(Grille grille) {
-		ArrayList<Tuile> casesPossibles = new ArrayList<>();
-
+		ArrayList<Tuile> casesPossibles = grille.getCasesAdjacentes(getPosition());
+                for (Tuile tuile : casesPossibles) {
+                    if (tuile.getEtat() == EtatTuile.COULEE) {
+                        casesPossibles.remove(tuile);
+                    }
+                }
 		return casesPossibles;
 	}
 
@@ -32,10 +37,6 @@ public abstract class Aventurier {
 
 	public Tuile getPosition() {
 		return this.casePosition;
-	}
-
-	public Tuile getCasePosition() {
-		return casePosition;
 	}
 
 
